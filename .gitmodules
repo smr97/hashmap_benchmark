@@ -1,6 +1,6 @@
 [submodule "abseil-cpp"]
 	path = abseil-cpp
-	url = ./abseil-cpp/.git
+	url = git@github.com:abseil/abseil-cpp.git
 [submodule "hopscotch-map"]
 	path = hopscotch-map
-	url = ./hopscotch-map/.git
+	url = git@github.com:Tessil/hopscotch-map.git
