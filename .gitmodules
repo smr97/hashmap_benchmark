@@ -1,0 +1,6 @@
+[submodule "abseil-cpp"]
+	path = abseil-cpp
+	url = ./abseil-cpp/.git
+[submodule "hopscotch-map"]
+	path = hopscotch-map
+	url = ./hopscotch-map/.git
