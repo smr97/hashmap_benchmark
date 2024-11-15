@@ -12,8 +12,6 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 # Abseil requires C++14
 set(CMAKE_CXX_STANDARD 20)
-#set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
-#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
 # Process Abseil's CMake build system
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/abseil-cpp)
