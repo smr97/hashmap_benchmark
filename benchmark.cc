@@ -1,4 +1,5 @@
 #include "absl/container/flat_hash_map.h"
+#include <ankerl/unordered_dense.h>
 #include <chrono>
 #include <iostream>
 #include <tsl/hopscotch_map.h>
@@ -59,6 +60,20 @@ int main() {
     t2 = std::chrono::high_resolution_clock::now();
     time_span = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
     std::cout << "Query time: " << time_span.count() << " mus" << std::endl;
+
+    ankerl::unordered_dense::map<uint64_t, double> robinhood_map;
+    std::cout << "Benchmarking ankerl::unordered_dense::map" << std::endl;
+    t1 = std::chrono::high_resolution_clock::now();
+    fill_data(robinhood_map, size);
+    t2 = std::chrono::high_resolution_clock::now();
+    time_span = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+    std::cout << "Insertion time: " << time_span.count() << " mus" << std::endl;
+    t1 = std::chrono::high_resolution_clock::now();
+    query_data(robinhood_map, size);
+    t2 = std::chrono::high_resolution_clock::now();
+    time_span = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+    std::cout << "Query time: " << time_span.count() << " mus" << std::endl;
+    std::cout<<"-----------------------------------"<<std::endl;
   }
   return 0;
 }

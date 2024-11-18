@@ -4,3 +4,6 @@
 [submodule "hopscotch-map"]
 	path = hopscotch-map
 	url = git@github.com:Tessil/hopscotch-map.git
+[submodule "unordered_dense"]
+	path = unordered_dense
+	url = git@github.com:martinus/unordered_dense.git
